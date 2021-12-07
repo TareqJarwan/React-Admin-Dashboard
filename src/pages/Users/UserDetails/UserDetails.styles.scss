@@ -1,0 +1,154 @@
+.user {
+  flex: 4;
+  padding: 20px;
+
+  &-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-add-button {
+    width: 80px;
+    border: none;
+    padding: 5px;
+    background-color: teal;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+  }
+
+  &-container {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  &-show {
+    flex: 1;
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  }
+
+  &-update {
+    flex: 2;
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    margin-left: 20px;
+  }
+
+  &-show-top {
+    display: flex;
+    align-items: center;
+  }
+
+  &-show-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &-show-top-title {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+  }
+
+  &-show-user-name {
+    font-weight: 600;
+  }
+
+  &-show-user-title {
+    font-weight: 300;
+  }
+
+  &-show-bottom {
+    margin-top: 20px;
+  }
+
+  &-show-Title {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(175, 170, 170);
+  }
+
+  &-show-info {
+    display: flex;
+    align-items: center;
+    margin: 20px 0px;
+    color: #444;
+  }
+
+  &-show-icon {
+    font-size: 16px !important;
+  }
+
+  &-show-info-title {
+    margin-left: 10px;
+  }
+
+  &-update-title {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  &-update-form {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  &-update-item {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  &-update-item > label {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+  &-UpdateInput {
+    border: none;
+    width: 250px;
+    height: 30px;
+    border-bottom: 1px solid gray;
+  }
+
+  &-update-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &-update-upload {
+    display: flex;
+    align-items: center;
+  }
+
+  &-update-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+
+  &-update-icon {
+    cursor: pointer;
+  }
+
+  &-update-button {
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    background-color: darkblue;
+    color: white;
+    font-weight: 600;
+  }
+}
