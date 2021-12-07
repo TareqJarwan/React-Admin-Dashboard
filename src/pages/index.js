@@ -1,4 +1,5 @@
 export { default as Home } from './Home/Home';
+export { default as PageNotFound } from './404/404';
 export { default as UserList } from './Users/UserList/UserList';
 export { default as UserDetails } from './Users/UserDetails/UserDetails';
 export { default as NewUser } from './Users/NewUser/NewUser';

@@ -13,11 +13,14 @@ import {
     WorkOutline,
     Report,
 } from "@material-ui/icons";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import './Sidebar.styles.scss';
 
 const Sidebar = () => {
+    const { pathname } = useLocation();
+    const splitLocation = pathname.split("/");
+
     return (
         <div className="sidebar">
             <div className="sidebar-wrapper">
@@ -25,7 +28,7 @@ const Sidebar = () => {
                     <h3 className="sidebar-title">Dashboard</h3>
                     <ul className="sidebar-list">
                         <Link to="/" className="sidebar-link">
-                            <li className="sidebar-list-item active">
+                            <li className={splitLocation[1] === "" ? "sidebar-list-item active" : "sidebar-list-item"} >
                                 <LineStyle className="sidebar-icon" />
                                 Home
                             </li>
@@ -45,13 +48,13 @@ const Sidebar = () => {
                     <h3 className="sidebar-title">Quick Menu</h3>
                     <ul className="sidebar-list">
                         <Link to="/users" className="sidebar-link">
-                            <li className="sidebar-list-item">
+                            <li className={splitLocation[1] === "users" ? "sidebar-list-item active" : "sidebar-list-item"}>
                                 <PermIdentity className="sidebar-icon" />
                                 Users
                             </li>
                         </Link>
                         <Link to="/products" className="sidebar-link">
-                            <li className="sidebar-list-item">
+                            <li className={splitLocation[1] === "products" ? "sidebar-list-item active" : "sidebar-list-item"}>
                                 <Storefront className="sidebar-icon" />
                                 Products
                             </li>

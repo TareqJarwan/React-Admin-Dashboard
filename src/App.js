@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import { Navbar, Sidebar } from './components';
-import { Home, UserList, UserDetails, NewUser, ProductDetails, NewProduct, ProductList } from './pages';
+import { Home, PageNotFound, UserList, UserDetails, NewUser, ProductDetails, NewProduct, ProductList } from './pages';
 
 import './App.styles.scss';
 
@@ -20,6 +20,7 @@ const App = () => {
                     <Route exact path="/products" element={<ProductList />} />
                     <Route exact path="/product/:productId" element={<ProductDetails />} />
                     <Route exact path="/new-product" element={<NewProduct />} />
+                    <Route path="*" element={<PageNotFound />} />
                 </Routes>
             </div>
         </Router>

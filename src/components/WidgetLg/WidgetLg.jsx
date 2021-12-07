@@ -43,27 +43,31 @@ const WidgetLg = () => {
         <div className="widgetLg">
             <span className="widgetLg-title">Latest transactions</span>
             <table className="widgetLg-table">
-                <tr className="widgetLg-tr">
-                    <th className="widgetLg-th">Customer</th>
-                    <th className="widgetLg-th">Date</th>
-                    <th className="widgetLg-th">Amount</th>
-                    <th className="widgetLg-th">Status</th>
-                </tr>
-                {users?.map((user, index) => (
-                    <tr className="widgetLg-tr" key={user.username}>
-                        <td className="widgetLg-user">
-                            <img alt={user.username}
-                                src={user.imgUrl}
-                                className="widgetLg-img" />
-                            <span className="widgetLg-name">{index}</span>
-                        </td>
-                        <td className="widgetLg-date">{user.date}</td>
-                        <td className="widgetLg-amount">{user.amount}</td>
-                        <td className="widgetLg-status">
-                            <Button type={user.status} />
-                        </td>
+                <thead>
+                    <tr className="widgetLg-tr">
+                        <th className="widgetLg-th">Customer</th>
+                        <th className="widgetLg-th">Date</th>
+                        <th className="widgetLg-th">Amount</th>
+                        <th className="widgetLg-th">Status</th>
                     </tr>
-                ))}
+                </thead>
+                <tbody>
+                    {users?.map((user, index) => (
+                        <tr className="widgetLg-tr" key={index}>
+                            <td className="widgetLg-user">
+                                <img alt={user.username}
+                                    src={user.imgUrl}
+                                    className="widgetLg-img" />
+                                <span className="widgetLg-name">{index}</span>
+                            </td>
+                            <td className="widgetLg-date">{user.date}</td>
+                            <td className="widgetLg-amount">{user.amount}</td>
+                            <td className="widgetLg-status">
+                                <Button type={user.status} />
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
             </table>
         </div>
     )

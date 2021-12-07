@@ -37,7 +37,7 @@ const WidgetSm = () => {
             <span className="widgetSm-title">New Join Members</span>
             <ul className="widgetSm-list">
                 {users?.map((user, index) => (
-                    <li className="widgetSm-list-item" key={user.username}>
+                    <li className="widgetSm-list-item" key={index}>
                         <img src={user.img}
                             alt={user.username}
                             className="widgetSm-img" />
